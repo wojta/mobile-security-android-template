@@ -2,6 +2,7 @@ package com.feedhenry.securenativeandroidtemplate.integrationtests
 
 import com.feedhenry.secureandroidtemplate.integrationtests.BuildConfig.BROWSER_PACKAGE
 import org.junit.Before
+import java.lang.Thread.sleep
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -44,8 +45,8 @@ class LoginTest : BaseTest() {
         assertEquals("LOGOUT", el7.text)
         val username = driver.findElementById("com.feedhenry.securenativeandroidtemplate:id/user_name")
         assertEquals("User 1", username.text)
+        sleep(2000) //required bacause of Snackbar
         el7.click()
-        el7.click() //currently issue here, that it won't do the click sometimes
 
         driver.findElementByAccessibilityId("Open navigation drawer").click()
         driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android" +
