@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':ake2e'
 include ':integration_tests'

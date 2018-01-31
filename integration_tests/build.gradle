@@ -10,6 +10,7 @@ dependencies {
     testCompile "org.jetbrains.kotlin:kotlin-test-junit"
     testCompile 'io.appium:java-client:5.0.4'
 
+    compile project(path: ':ake2e')
 }
 
 buildscript {
